@@ -110,17 +110,18 @@ section {
 }
 
 /* Adventure Awaits You Section */
+/* Adventure Awaits You Section */
 .adventures {
     margin: 50px 0;
-    display: flex; /* Changed to flex for horizontal alignment */
-    justify-content: space-between; /* Distribute items evenly */
+    display: flex; /* Cambié a flexbox para asegurar alineación horizontal */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten si el contenedor es pequeño */
+    justify-content: space-between; /* Alinea los elementos con espacio entre ellos */
     gap: 1rem;
-    flex-wrap: wrap; /* Allow wrapping of images if screen is small */
 }
 
 .adventure {
-    flex: 1 1 20%; /* Ensure each image takes 20% of the width and grows/shrinks */
-    min-width: 200px; /* Minimum size to maintain layout */
+    flex: 1 1 18%; /* Asegura que las imágenes ocupen el 18% del espacio disponible */
+    min-width: 250px; /* Añadí un valor mínimo para las imágenes, para que no sean demasiado pequeñas */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,13 +131,13 @@ section {
 
 .adventure img {
     max-width: 100%;
-    height: auto; /* Ensure images are responsive */
+    height: auto; /* Mantiene la proporción de las imágenes */
     border-radius: 10px;
     margin-bottom: 1rem;
 }
 
-.adventure h2 {
-    font-size: 2rem;
+.adventure h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--secondary-color); /* Light Blue */
 }
