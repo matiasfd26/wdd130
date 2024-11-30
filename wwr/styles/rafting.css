@@ -79,14 +79,18 @@ section {
 }
 
 /* History Section */
-.history {
+.history { 
     background-color: var(--secondary-color); /* Pale Blue */
     color: var(--accent-2); /* Slate Blue for text */
-    padding: 60px 20px;
+    padding: 50px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
-
+.history img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 .history h2 {
     font-size: 2.5rem;
     color: var(--accent-1); /* Sky Blue */
