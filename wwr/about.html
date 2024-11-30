@@ -1,90 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Rafting</title>
-    <meta name="author" content="Matias Dominguez">
-    <meta name="description" content="This is the about us page for the rafting site.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
-
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Mi Página de Aventura</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Page content -->
     <header>
-        <img src="images/Picture1.jpg" alt="Logo">
-        <!-- Navigation -->
+        <div class="logo">
+            <!-- Logo aquí -->
+            <img src="images/logo.png" alt="Logo de la empresa">
+        </div>
+        <h1>Mi Página de Aventura</h1>
         <nav>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
-
+            <a href="#home">Inicio</a>
+            <a href="#history">Historia</a>
+            <a href="#adventures">Aventuras</a>
+            <a href="#contact">Contacto</a>
         </nav>
-        </div>
     </header>
+
     <main>
-        <!-- Hero Section -->
-
-        <div class="hero">
-            <img src="images/rafting10_1024.jpg" alt="Hero Images">
-            <h1 class="abs-heading1">Welcome to Adventure Rafting</h1>
-            <article>
-                <h2>Meet Our Team</h2>
-                <img src="images/IMA7.jpg" alt="Happy Employee">
-                <p>We are a company committed to adventure and fun in white-water rafting.</p>
-            </article>
-        </div>
-        <section class="History">
-            <h2>Our History</h2>
-            <p>Founded in 1990, our company has offered unique rafting experiences in the best places throughout the country. It is an activity which we take to its maximum expression where family, friends and adventurers get together to experience new emotions and where water is a part of it. Since its founding we have always sought to make this activity something out of the ordinary, and was born in the experience that the founders had with their families to share something that generated curiosity and excitement.</p>
-        </section>
-        <section class="Adventures">
-            <h2>Your Adventure Awaits!</h2>
-            <figure>
-                <img src="images/IMA1.jpg" alt="Desolate Canyon">
-                <figcaption>Desolate Canyon</figcaption>
-            </figure>
-            <figure>
-                <img src="images/IMA2.jpg" alt="Laughing on the river">
-                <figcaption>Laughing on the river</figcaption>
-            </figure>
-            <figure>   
-            <img src="images/IMA3.jpg" alt="Having fun on rapics">
-            <figcaption>Having fun on rapics</figcaption>
-            </figure>
-            <figure>
-                <img src="images/IMA4.jpg" alt="Safety Equipment">
-                <figcaption>Safety Equipment</figcaption>
-            </figure>
-            <figure>
-                <img src="images/IMA5.jpg" alt="Having fun with friends">
-                <figcaption>Having fun with friends</figcaption>
-            </figure>
-           
+        <section class="hero">
+            <h1>¡Aventura Te Espera!</h1>
         </section>
 
+        <section class="history" id="history">
+            <h2>Historia</h2>
+            <img src="images/history-image.jpg" alt="Historia de la aventura">
+            <p>Bienvenido a nuestra historia, donde las aventuras más emocionantes comienzan. Únete a nosotros y explora el mundo como nunca antes...</p>
+            <button>Leer Más</button>
+        </section>
+
+        <section class="adventures" id="adventures">
+            <h2>Las Aventuras Te Esperan</h2>
+            <div class="adventure">
+                <img src="images/adventure-1.jpg" alt="Aventura 1">
+                <h3>Aventura 1</h3>
+                <p>Disfruta de paisajes exóticos y actividades emocionantes.</p>
+                <button>Descubrir</button>
+            </div>
+            <div class="adventure">
+                <img src="images/adventure-2.jpg" alt="Aventura 2">
+                <h3>Aventura 2</h3>
+                <p>Experimenta la naturaleza en su máxima expresión.</p>
+                <button>Descubrir</button>
+            </div>
+            <div class="adventure">
+                <img src="images/adventure-3.jpg" alt="Aventura 3">
+                <h3>Aventura 3</h3>
+                <p>Rafting, trekking y mucho más para los más atrevidos.</p>
+                <button>Descubrir</button>
+            </div>
+            <div class="adventure">
+                <img src="images/adventure-4.jpg" alt="Aventura 4">
+                <h3>Aventura 4</h3>
+                <p>Vive la experiencia de aventura en cada rincón del planeta.</p>
+                <button>Descubrir</button>
+            </div>
+            <div class="adventure">
+                <img src="images/adventure-5.jpg" alt="Aventura 5">
+                <h3>Aventura 5</h3>
+                <p>Las montañas, los ríos y la selva te esperan para explorarlas.</p>
+                <button>Descubrir</button>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Adventure Rafting. All rights reserved.</p>
+        <div class="copyright">
+            <p>&copy; 2024 Mi Página de Aventura. Todos los derechos reservados.</p>
+        </div>
         <div class="social-media">
-            <a href="https://www.facebook.com"><img src="images/6214717facebooklogomessengericon.svg"
-                    alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="images/5296765camerainstagraminstagramlogoicon.svg"
-                    alt="Instagram"></a>
-            <a href="https://www.twitter.com"><img src="images/7559931twittermediasocialpixellogoicon.svg"
-                    alt="Twitter"></a>
+            <a href="#" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            <a href="#" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
         </div>
     </footer>
 </body>
-
 </html>
