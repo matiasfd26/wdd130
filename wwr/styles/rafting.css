@@ -14,7 +14,10 @@ body {
     padding: 0;
     color: var(--accent-2); /* Set text color to Accent 2 */
 }
-
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--secondary-color); /* Headings in secondary color */
@@ -30,28 +33,21 @@ a {
     color: inherit;
 }
 /* Header Layout with CSS Grid */
+
+
 header {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Logo, heading, and navigation */
-    grid-gap: 20px; /* Space between elements */
-    align-items: center; /* Vertically center the content */
-    padding: 20px;
-    background-color: var(--primary-color);
-}
-
-header .header-content {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Logo, heading, and nav */
+    grid-template-columns: 200px auto; /* Logo, heading, and nav */
     grid-gap: 20px;
     align-items: center;
 }
 
-header .logo {
+.logo {
     width: 150px; /* Logo width */
     height: auto;
 }
 
-header h1 {
+.hero h1 {
     font-family: 'Montserrat', sans-serif;
     color: var(--secondary-color);
     font-size: 2.5em;
@@ -59,26 +55,20 @@ header h1 {
     text-align: center; /* Ensure h1 is centered */
 }
 /* Nav inside Header using Flexbox */
-header nav ul {
+header nav {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: flex-end; /* Align nav items to the right */
+    justify-content: space-around; /* Align nav items to the right */
 }
-header nav ul li {
-    margin-left: 20px; /* Space between nav items */
-}
-header nav ul li a {
+header nav a {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--accent-2);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 1em;
     border-radius: 5px; /* Add rounded corners to links */
 }
 /* Hover effect for navigation links */
-header nav ul li a:hover {
+header nav a:hover {
     background-color: var(--accent-1);
     color: white;
 }
