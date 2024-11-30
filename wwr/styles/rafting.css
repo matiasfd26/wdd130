@@ -1,0 +1,161 @@
+/* Color Variables */
+:root {
+    --primary-color: #cae5ff; /* Light Blue */
+    --secondary-color: #acedff; /* Pale Blue */
+    --accent-1: #89bbfe; /* Sky Blue */
+    --accent-2: #6f8ab7; /* Slate Blue */
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    color: var(--accent-2); /* Set text color to Accent 2 */
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color); /* Headings in secondary color */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--accent-2); /* Text in Accent 2 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Header Layout with CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo, heading, and navigation */
+    grid-gap: 20px; /* Space between elements */
+    align-items: center; /* Vertically center the content */
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+header .header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo, heading, and nav */
+    grid-gap: 20px;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px; /* Logo width */
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center; /* Ensure h1 is centered */
+}
+/* Nav inside Header using Flexbox */
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end; /* Align nav items to the right */
+}
+header nav ul li {
+    margin-left: 20px; /* Space between nav items */
+}
+header nav ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--accent-2);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Add rounded corners to links */
+}
+/* Hover effect for navigation links */
+header nav ul li a:hover {
+    background-color: var(--accent-1);
+    color: white;
+}
+/* Historia Section */
+section h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--accent-2);
+    margin-bottom: 30px;
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+article {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+article img {
+    float: right;
+    margin-left: 20px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* Rafting Images */
+.rafting-images img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.rafting-images img:nth-child(2),
+.rafting-images img:nth-child(3),
+.rafting-images img:nth-child(4),
+.rafting-images img:nth-child(5) {
+    width: 48%;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-2);
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a img {
+    width: 30px;
+    margin: 0 10px;
+}
