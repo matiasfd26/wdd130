@@ -41,7 +41,11 @@ header {
     grid-gap: 20px;
     align-items: center;
 }
-
+history {display: grid;
+grid-template-columns: 2fr 1fr 2fr;
+gap: 2em;
+margin: 50px 0;
+}
 .logo {
     width: 150px; /* Logo width */
     height: auto;
