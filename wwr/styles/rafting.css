@@ -46,6 +46,10 @@ grid-template-columns: 2fr 1fr 2fr;
 gap: 2em;
 margin: 50px 0;
 }
+history h2 {grid-column: 1/-1;
+justify-self: center;
+padding: 1em 0;
+}
 .logo {
     width: 150px; /* Logo width */
     height: auto;
