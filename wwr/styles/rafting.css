@@ -32,9 +32,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /* Header Layout with CSS Grid */
-
-
 header {
     display: grid;
     grid-template-columns: 200px auto; /* Logo, heading, and nav */
@@ -53,6 +52,7 @@ header {
     margin: 0;
     text-align: center; /* Ensure h1 is centered */
 }
+
 /* Nav inside Header using Flexbox */
 header nav {
     display: flex;
@@ -66,11 +66,13 @@ header nav a {
     padding: 1em;
     border-radius: 5px; /* Add rounded corners to links */
 }
+
 /* Hover effect for navigation links */
 header nav a:hover {
     background-color: var(--accent-1);
     color: white;
 }
+
 /* Section Styles */
 section {
     padding: 50px 20px; /* General padding for sections */
@@ -90,7 +92,7 @@ section {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
 .history h2 {
     font-size: 2.5rem;
     color: var(--accent-1); /* Sky Blue */
@@ -110,30 +112,39 @@ section {
 /* Adventure Awaits You Section */
 .adventures {
     margin: 50px 0;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex; /* Changed to flex for horizontal alignment */
+    justify-content: space-between; /* Distribute items evenly */
     gap: 1rem;
-    justify-items: center
+    flex-wrap: wrap; /* Allow wrapping of images if screen is small */
 }
-figure:nth-of-type(odd) {
-    background-color: var(--accent1-color);
-    color: var(--nav-link-color);
-    align-self: center;
+
+.adventure {
+    flex: 1 1 20%; /* Ensure each image takes 20% of the width and grows/shrinks */
+    min-width: 200px; /* Minimum size to maintain layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+.adventure img {
+    max-width: 100%;
+    height: auto; /* Ensure images are responsive */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
 .adventure h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    position: relative; /* To layer above overlay */
-    z-index: 2;
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: var(--secondary-color); /* Light Blue */
 }
 
 .adventure p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -153,6 +164,7 @@ figure:nth-of-type(odd) {
 .adventure button:hover, .history button:hover {
     background-color: var(--accent-2);
 }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -207,13 +219,26 @@ article img {
 
 /* Footer Styles */
 footer {
+    display: flex;
+    justify-content: space-between; /* Spread out the content */
+    align-items: center;
     background-color: var(--secondary-color);
     color: var(--accent-2);
     padding: 20px;
-    text-align: center;
+    text-align: left;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
 }
 
 footer .social-media a img {
     width: 30px;
     margin: 0 10px;
+}
+
+footer .copyright {
+    font-size: 1rem;
+    color: var(--accent-2);
 }
