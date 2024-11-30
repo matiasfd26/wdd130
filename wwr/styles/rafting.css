@@ -108,14 +108,12 @@ section {
 }
 
 /* Adventure Awaits You Section */
-.adventure {
-    background-image: url('images/adventure-background.jpg'); /* Background image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 20px;
-    border-radius: 10px;
-    position: relative; /* For overlay positioning */
+.adventures {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    justify-items: center
 }
 
 .adventure::before {
