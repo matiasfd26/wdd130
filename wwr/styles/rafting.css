@@ -118,7 +118,6 @@ section {
     gap: 1rem; /* Espacio entre las imágenes */
 }
 
-/* Estilo para cada imagen dentro de la sección */
 .adventure {
     flex: 1 1 18%; /* Hace que cada imagen ocupe aproximadamente el 18% del contenedor */
     min-width: 250px; /* Previene que las imágenes se reduzcan demasiado */
@@ -130,7 +129,7 @@ section {
 }
 
 .adventure img {
-    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
+    max-width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
     height: auto; /* Mantiene la proporción de las imágenes */
     border-radius: 10px;
     margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
@@ -148,7 +147,6 @@ section {
     max-width: 90%;
     margin: 0 auto; /* Asegura que el texto se alinee en el centro */
 }
-
 
 /* Shared Styles for Buttons */
 .adventure button, .history button {
