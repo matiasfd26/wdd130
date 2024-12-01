@@ -217,25 +217,6 @@ article img {
     display: inline-block;
     margin-right: 2%;
 }
-  
-  /* Hero Section (Corregir el float) */
-  .hero article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .hero article img {
-    width: 100px; /* Asegura que la imagen del artículo no sea demasiado grande */
-    border-radius: 50%;
-    margin-right: 20px; /* Se asegura que la imagen y el texto no se solapen */
-  }
-  
-  /* La imagen en el artículo ya no necesita float, ahora es alineada con Flexbox */
-}
 
 /* Footer Styles */
 footer {
