@@ -204,18 +204,48 @@ article img {
 }
 
 /* Rafting Images */
-.rafting-images img {
-    width: 100%;
+.rafting-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaciado entre las imágenes */
+    justify-content: space-between; /* Alinea las imágenes en líneas */
+  }
+  
+  .rafting-images img {
+    width: 100%; /* Asegura que las imágenes ocupen el 100% de su contenedor */
+    height: auto;
+    border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.rafting-images img:nth-child(2),
-.rafting-images img:nth-child(3),
-.rafting-images img:nth-child(4),
-.rafting-images img:nth-child(5) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 2%;
+  }
+  
+  /* Especificación para las imágenes cuando hay más de una */
+  .rafting-images img:nth-child(2),
+  .rafting-images img:nth-child(3) {
+    width: 48%; /* Dos imágenes por línea */
+  }
+  
+  .rafting-images img:nth-child(4),
+  .rafting-images img:nth-child(5) {
+    width: 48%; /* También dos imágenes más pequeñas */
+  }
+  
+  /* Hero Section (Corregir el float) */
+  .hero article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero article img {
+    width: 100px; /* Asegura que la imagen del artículo no sea demasiado grande */
+    border-radius: 50%;
+    margin-right: 20px; /* Se asegura que la imagen y el texto no se solapen */
+  }
+  
+  /* La imagen en el artículo ya no necesita float, ahora es alineada con Flexbox */
 }
 
 /* Footer Styles */
