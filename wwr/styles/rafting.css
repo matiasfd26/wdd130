@@ -1,9 +1,9 @@
 /* Color Variables */
 :root {
-    --primary-color: hsl(204, 24%, 96%); /* Light Blue */
+    --primary-color:#4f646f; /* Light Blue */
     --secondary-color: #acedff; /* Pale Blue */
-    --accent-1: #89bbfe; /* Sky Blue */
-    --accent-2: #6f8ab7; /* Slate Blue */
+    --accent-1: #cae5ff; /* Sky Blue */
+    --accent-2: #d8e9dc; /* Slate Blue */
 }
 
 /* General Styles */
