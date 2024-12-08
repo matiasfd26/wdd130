@@ -1,6 +1,6 @@
 /* Color Variables */
 :root {
-    --primary-color:#4f646f; /* Light Blue */
+    --primary-color: #4f646f; /* Light Blue */
     --secondary-color: #acedff; /* Pale Blue */
     --accent-1: #cae5ff; /* Sky Blue */
     --accent-2: #d8e9dc; /* Slate Blue */
@@ -242,4 +242,101 @@ footer .social-media a img {
 footer .copyright {
     font-size: 1rem;
     color: var(--accent-2);
+}
+
+/* Contact Page Specific Styles */
+
+/* Section for Company Information */
+#company-info {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#company-info iframe {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Employee Profiles */
+#employee-profiles {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+}
+
+.employee-profile {
+    text-align: center;
+    margin: 20px;
+}
+
+.employee-profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.employee-profile p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: var(--accent-2);
+}
+
+/* Contact Form Styles */
+#contact-form {
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--accent-2);
+}
+
+form button {
+    margin-top: 20px;
+    background-color: var(--accent-1);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent-2);
+}
+/* Link to the wireframe */
+#wireframe-link {
+    text-align: center;
+    margin-top: 20px;
+}
+#wireframe-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+#wireframe-link a:hover {
+    text-decoration: underline;
 }
