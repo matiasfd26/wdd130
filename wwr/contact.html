@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Adventure Rafting</title>
+    <meta name="author" content="Matias Dominguez">
+    <meta name="description" content="Contact Adventure Rafting for more information.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!-- Page content -->
+    <header>
+        <img src="images/Picture1.jpg" alt="Logo">
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Contact Information Section -->
+        <section id="company-info">
+            <h2>Company Information</h2>
+            <p><strong>Address:</strong> 1234 Adventure Road, Rafting Town, RFT 56789</p>
+            <p><strong>Phone Number:</strong> +1 (800) 123-4567</p>
+            <p><strong>Email:</strong> contact@raftingadventures.com</p>
+
+            <!-- Embedded Google Map -->
+            <h3>Our Location</h3>
+            <iframe 
+                img src="images/Map.jpg" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section id="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employee-profile">
+                <img src="images/employee1.jpg" alt="Employee 1" width="150" height="150">
+                <p>Jane Doe - Customer Service</p>
+            </div>
+            <div class="employee-profile">
+                <img src="images/employee2.jpg" alt="Employee 2" width="150" height="150">
+                <p>John Smith - Adventure Guide</p>
+            </div>
+            <div class="employee-profile">
+                <img src="images/employee3.jpg" alt="Employee 3" width="150" height="150">
+                <p>Emma White - Marketing Manager</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="purpose">Purpose of your message:</label>
+                <div>
+                    <input type="radio" id="general-inquiry" name="purpose" value="General Inquiry">
+                    <label for="general-inquiry">General Inquiry</label>
+                </div>
+                <div>
+                    <input type="radio" id="reservation-question" name="purpose" value="Reservation Question">
+                    <label for="reservation-question">Reservation Question</label>
+                </div>
+                <div>
+                    <input type="radio" id="website-suggestion" name="purpose" value="Website Suggestion">
+                    <label for="website-suggestion">Website Suggestion</label>
+                </div>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <div>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Your Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adventure Rafting. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com"><img src="images/6214717facebooklogomessengericon.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="images/5296765camerainstagraminstagramlogoicon.svg" alt="Instagram"></a>
+            <a href="https://www.twitter.com"><img src="images/7559931twittermediasocialpixellogoicon.svg" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>
