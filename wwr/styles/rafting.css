@@ -12,7 +12,7 @@ body {
     background-color: var(--primary-color);
     margin: 0;
     padding: 0;
-    color: var(--accent-2); /* Set text color to Accent 2 */
+    color: var(--accent-2);
 }
 header, main, footer {
     max-width: 1200px;
@@ -20,12 +20,12 @@ header, main, footer {
 }
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--secondary-color); /* Headings in secondary color */
+    color: var(--accent-2);
 }
 
 p {
     font-family: 'Roboto', sans-serif;
-    color: var(--accent-2); /* Text in Accent 2 */
+    color: var(--accent-2);
 }
 
 a {
@@ -33,310 +33,125 @@ a {
     color: inherit;
 }
 
-/* Header Layout with CSS Grid */
+/* Header Layout */
 header {
-    display: grid;
-    grid-template-columns: 200px auto; /* Logo, heading, and nav */
-    grid-gap: 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
+    background-color: var(--secondary-color);
 }
-.logo {
-    width: 150px; /* Logo width */
+
+header .logo {
+    width: 100px;
     height: auto;
 }
 
-.hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--secondary-color);
-    font-size: 2.5em;
-    margin: 0;
-    text-align: center; /* Ensure h1 is centered */
-}
-
-/* Nav inside Header using Flexbox */
 header nav {
     display: flex;
-    justify-content: space-around; /* Align nav items to the right */
+    gap: 20px;
 }
+
 header nav a {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: var(--accent-2);
     text-decoration: none;
-    padding: 1em;
-    border-radius: 5px; /* Add rounded corners to links */
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-/* Hover effect for navigation links */
 header nav a:hover {
     background-color: var(--accent-1);
     color: white;
 }
 
-/* Section Styles */
-section {
-    padding: 50px 20px; /* General padding for sections */
-    text-align: center; /* Center-align text by default */
-    background-color: var(--primary-color); /* Default background color */
+/* White Water Rafting Section */
+section.white-water {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
 }
 
-/* History Section */
-.history { 
-    background-color: var(--secondary-color); /* Pale Blue */
-    color: var(--accent-2); /* Slate Blue for text */
-    padding: 50px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+.white-water .text {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 600px;
 }
-.history img {
-    width: 100%;
+
+.white-water img {
+    flex: 1;
+    max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.history h2 {
-    font-size: 2.5rem;
-    color: var(--accent-1); /* Sky Blue */
-    margin-bottom: 20px;
+
+/* History Section */
+section.history {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.history img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .history p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--accent-2);
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Adventure Awaits You Section */
-
-.adventures {
-    margin: 50px 0;
-    display: flex; 
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center; 
-    gap: 1rem; 
+section.adventures {
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
 }
 
 .adventure {
-    flex: 1 1 18%; 
-    min-width: 250px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
     text-align: center;
 }
 
 .adventure img {
-    max-width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
-    height: auto; /* Mantiene la proporción de las imágenes */
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
-}
-
-.adventure h3 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--secondary-color); /* Color del título */
 }
 
 .adventure p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 90%;
-    margin: 0 auto; /* Asegura que el texto se alinee en el centro */
+    font-size: 0.9rem;
+    color: var(--accent-2);
 }
 
-/* Shared Styles for Buttons */
-.adventure button, .history button {
-    background-color: var(--accent-1);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-.adventure button:hover, .history button:hover {
-    background-color: var(--accent-2);
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    background-image: url('images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3em;
-    font-weight: 700;
-}
-
-article {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-article img {
-    float: right;
-    margin-left: 20px;
-    width: 100px;
-    border-radius: 50%;
-}
-
-/* Rafting Images */
-.rafting-images img {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.rafting-images img:nth-child(2),
-.rafting-images img:nth-child(3),
-.rafting-images img:nth-child(4),
-.rafting-images img:nth-child(5) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 2%;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     display: flex;
-    justify-content: space-between; /* Spread out the content */
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary-color);
-    color: var(--accent-2);
     padding: 20px;
-    text-align: left;
-}
-
-footer .social-media {
-    display: flex;
-    justify-content: flex-end; /* Align to the right */
-}
-
-footer .social-media a img {
-    width: 30px;
-    margin: 0 10px;
-}
-
-footer .copyright {
-    font-size: 1rem;
-    color: var(--accent-2);
-}
-
-/* Contact Page Specific Styles */
-
-/* Section for Company Information */
-#company-info {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#company-info iframe {
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-/* Employee Profiles */
-#employee-profiles {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 20px;
     background-color: var(--primary-color);
-}
-
-.employee-profile {
-    text-align: center;
-    margin: 20px;
-}
-
-.employee-profile img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
-.employee-profile p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color: var(--accent-2);
-}
-
-/* Contact Form Styles */
-#contact-form {
-    padding: 40px 20px;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--accent-2);
-}
-
-form button {
-    margin-top: 20px;
-    background-color: var(--accent-1);
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: var(--accent-2);
-}
-/* Link to the wireframe */
-#wireframe-link {
-    text-align: center;
-    margin-top: 20px;
-}
-#wireframe-link a {
     color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
 }
-#wireframe-link a:hover {
-    text-decoration: underline;
+
+footer .social-media a {
+    margin-left: 15px;
+}
+
+footer .social-media img {
+    width: 20px;
+    height: auto;
 }
