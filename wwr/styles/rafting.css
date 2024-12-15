@@ -82,14 +82,19 @@ header nav a:hover {
 
 /* White Water Rafting Section */
 .white-water {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 50px 20px;
     background-color: var(--secondary-color);
+    gap: 20px;
 }
 
 .white-water h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    flex-basis: 100%;
+    text-align: center;
 }
 
 .white-water .content {
@@ -112,25 +117,35 @@ header nav a:hover {
 
 /* History Section */
 .history {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
     padding: 50px 20px;
     background-color: var(--secondary-color);
     color: var(--accent-2);
     border-radius: 10px;
-}
-
-.history img {
-    width: 100%;
-    border-radius: 10px;
+    text-align: center;
 }
 
 .history h2 {
-    grid-column: span 2;
-    text-align: center;
+    font-size: 2em;
     margin-bottom: 20px;
+}
+
+.history .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+}
+
+.history .content img {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.history .content .text {
+    flex: 1;
 }
 
 /* Adventure Awaits You Section */
@@ -169,8 +184,8 @@ header nav a:hover {
 
 /* Footer Styles */
 footer {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: var(--secondary-color);
@@ -180,21 +195,9 @@ footer {
 footer .social-media {
     display: flex;
     gap: 10px;
-    justify-content: flex-end;
 }
 
 footer .social-media img {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-footer .social-media img:hover {
-    transform: scale(1.2);
-}
-
-footer .copyright {
-    text-align: left;
-    font-size: 1rem;
 }
