@@ -20,7 +20,7 @@ header, main, footer {
 }
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--accent-2);
+    color: var(--secondary-color);
 }
 
 p {
@@ -38,8 +38,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
     background-color: var(--secondary-color);
+    padding: 20px;
 }
 
 header .logo {
@@ -59,6 +59,7 @@ header nav a {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 header nav a:hover {
@@ -66,92 +67,134 @@ header nav a:hover {
     color: white;
 }
 
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
 /* White Water Rafting Section */
-section.white-water {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.white-water {
+    text-align: center;
     padding: 50px 20px;
     background-color: var(--secondary-color);
 }
 
-.white-water .text {
-    flex: 1;
-    margin-right: 20px;
-    max-width: 600px;
+.white-water h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.white-water img {
+.white-water .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.white-water .content p {
+    flex: 2;
+    text-align: left;
+}
+
+.white-water .content img {
     flex: 1;
-    max-width: 300px;
+    max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* History Section */
-section.history {
+.history {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
     padding: 50px 20px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--accent-2);
+    border-radius: 10px;
 }
 
 .history img {
-    max-width: 200px;
-    height: auto;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.history p {
-    font-size: 1rem;
-    line-height: 1.5;
+.history h2 {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Adventure Awaits You Section */
-section.adventures {
+.adventures {
     padding: 50px 20px;
-    background-color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.adventure {
+    background-color: var(--primary-color);
     text-align: center;
 }
 
-.adventure img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.adventure p {
-    font-size: 0.9rem;
-    color: var(--accent-2);
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--primary-color);
+.adventures h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
     color: var(--secondary-color);
 }
 
-footer .social-media a {
-    margin-left: 15px;
+.adventures .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.adventures .grid .adventure {
+    text-align: center;
+}
+
+.adventures .grid .adventure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.adventures .grid .adventure caption {
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+
+/* Footer Styles */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent-2);
+}
+
+footer .social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
 }
 
 footer .social-media img {
-    width: 20px;
-    height: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.2);
+}
+
+footer .copyright {
+    text-align: left;
+    font-size: 1rem;
 }
