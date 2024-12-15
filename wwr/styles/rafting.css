@@ -168,41 +168,89 @@ section {
 
 /* Hero Section */
 .hero {
-    position: relative;
-    background-image: url('images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
     text-align: center;
+    padding: 50px;
+    background-color: var(--primary-color);
     color: white;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3em;
-    font-weight: 700;
+.hero .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent-2);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-article {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+.hero .cta-button:hover {
+    background-color: var(--accent-1);
+}
+
+/* Trip Details Section */
+.trip-details {
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.trip-details .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-details .trip img {
+    width: 100%;
     border-radius: 10px;
 }
 
-article img {
-    float: right;
-    margin-left: 20px;
-    width: 100px;
-    border-radius: 50%;
+.trip-details .trip h3 {
+    margin: 10px 0 5px;
+    color: var(--accent-2);
 }
 
+/* Trip Table */
+.trip-table {
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.trip-table th, .trip-table td {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+}
+
+.trip-table th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.trip-table td {
+    background-color: var(--accent-1);
+}
+
+/* Social Media Icons in Footer */
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.2);
+}
 /* Rafting Images */
 .rafting-images img {
     width: 100%;
